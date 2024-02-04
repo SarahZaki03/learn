@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Edu+SA+Beginner:wght@400;500;600;700&display=swap');
+html{
+    --main-dark: #000010;
+    --main-light: #cacac8;
+    --white: #ffffff;
+    --main-right: #f73149;
+    --main-line: #b6846b;
+    --right-ruler: 144px;
+    --top-ruler: 89px;
+}
+.m-t{
+    margin-block-start: 21px;
+}
+.b-m-t{ /* big margin top */
+    margin-block-start: 55px;
+}
+.m-x{
+    margin-inline: 21px;
+}
+.m-y{
+    margin-block: 21px;
+}
+.m-all{
+    margin: 21px;
+}
+.p-all{
+    padding: 21px;
+}
+.border-bottom{
+    border-bottom: 1px solid var(--main-dark) ;
+}
+.monospace{
+    font-family: monospace;
+}
+.edufont{
+    font-family: 'Edu SA Beginner';
+}
+.f-size-2{
+    font-size: 2rem;
+}
+.f-size-small{
+    font-size: 1.5rem;
+}
+ul{
+    list-style: none;
+}
+.program{
+    color: blue;
+}
+.code{
+    color: var(--main-line);
+}

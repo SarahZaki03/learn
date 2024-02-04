@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Edu+SA+Beginner:wght@400;500;600;700&display=swap');
+html{
+    --main-dark: #000010;
+    --main-light: #cacac8;
+    --white: #ffffff;
+    --main-right: #f73149;
+    --main-line: #b6846b;
+    --right-ruler: 144px;
+    --top-ruler: 89px;
+}
+*{
+    margin: 0;
+}
+a{
+    text-decoration: none;
+    color: var(--main-dark);
+}
+header.main-header{
+    height: 377px;
+    /* background: url('../img/bird.png'); 
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right;
+    background-clip: padding-box;*/
+    /* background-color: var(--white); */
+    border-bottom: 3px solid var(--main-dark);
+    color: var(--main-dark);
+}
+header section{
+    margin-inline-start: var(--right-ruler);
+    padding-block-start: var(--top-ruler);
+}
+header h1, header h2{
+    font-family: monospace;
+}
+header h1{
+    font-size: 3rem;
+}
+header h2{
+    font-size: 2rem;
+}
+header section p{
+    font-family: 'Edu SA Beginner', monospace;
+    font-size: 1.5rem;
+    margin-inline-start: 55px;
+}
+main{
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    margin-inline-start: var(--right-ruler);
+    margin-block-start: var(--top-ruler);
+}
+main nav div.class{
+    font-family: monospace;
+    font-size: 2.5rem;
+    padding: 21px;
+    background-color: var(--white);
+    border-bottom: 2px solid var(--main-light);
+    margin-block-end: 21px;
+}
+main nav div.class:hover{
+    border-bottom: 2px solid var(--main-right);
+}
+main nav div.class.active{
+    border-bottom: 2px solid var(--main-dark);
+}
+main .content-container{
+    /* border: 1px solid var(--main-light); */
+    margin-inline: 55px;
+    box-shadow: 0 0 13px var(--main-light);
+}
+article{
+    background-color: var(--main-light);
+}
+footer{
+    height: 610px;
+    margin-block-start: var(--top-ruler);
+}
