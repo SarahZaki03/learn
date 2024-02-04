@@ -50,3 +50,10 @@ ul{
 .code{
     color: var(--main-line);
 }
+.d-flex{
+    display: flex;
+}
+.flex-center{
+    align-items: center;
+    justify-content: center;
+}

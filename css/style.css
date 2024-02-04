@@ -73,6 +73,10 @@ article{
     background-color: var(--main-light);
 }
 footer{
-    height: 610px;
+    height: 377px;
     margin-block-start: var(--top-ruler);
+    border-top: 3px solid var(--main-dark)
+}
+footer p{
+    text-align: center;
 }
