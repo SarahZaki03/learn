@@ -17,11 +17,11 @@ a{
 }
 header.main-header{
     height: 377px;
-    /* background: url('../img/bird.png'); 
+    background: url('../img/bird.png'); 
     background-repeat: no-repeat;
     background-size: contain;
     background-position: right;
-    background-clip: padding-box;*/
+    background-clip: padding-box;
     /* background-color: var(--white); */
     border-bottom: 3px solid var(--main-dark);
     color: var(--main-dark);
