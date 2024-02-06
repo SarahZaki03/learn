@@ -5,8 +5,8 @@ html{
     --white: #ffffff;
     --main-right: #f73149;
     --main-line: #b6846b;
-    --right-ruler: 144px;
-    --top-ruler: 89px;
+    --right-ruler: 7rem;
+    --top-ruler: 4rem;
 }
 *{
     margin: 0;
@@ -17,11 +17,16 @@ a{
 }
 header.main-header{
     height: 377px;
-    background: url('../img/bird.png'); 
+    
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
     background-position: right;
     background-clip: padding-box;
+    /* background-image: linear-gradient(to right, 0 transparent 50%, green), url('../img/bird.png');  */
+    background-image:
+    linear-gradient(to bottom, rgba(245, 246, 252, 0.52), var(--main-light)),
+    url('../img/bird.png');
+    background-position: top;
     /* background-color: var(--white); */
     border-bottom: 3px solid var(--main-dark);
     color: var(--main-dark);
