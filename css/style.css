@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Edu+SA+Beginner:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400&display=swap');
 html{
     --main-dark: #000010;
     --main-light: #cacac8;
@@ -11,9 +12,27 @@ html{
 *{
     margin: 0;
 }
+::selection{
+    background-color: var(--white);
+    color: var(--main-right);
+}
 a{
     text-decoration: none;
     color: var(--main-dark);
+    color: var(--main-right);
+}
+ul{
+    list-style: none;
+    padding-inline-start: 20px;
+}
+li{
+    margin-block-start: 13px;
+}
+p{
+    margin-block-start: 5px;
+}
+p::first-letter{
+    text-transform: capitalize;
 }
 header.main-header{
     height: 377px;
@@ -24,7 +43,7 @@ header.main-header{
     background-clip: padding-box;
     /* background-image: linear-gradient(to right, 0 transparent 50%, green), url('../img/bird.png');  */
     background-image:
-    linear-gradient(to bottom, rgba(245, 246, 252, 0.52), var(--main-light)),
+    linear-gradient(to bottom, rgba(245, 246, 252, 0.22) 70%, var(--main-light)),
     url('../img/bird.png');
     background-position: top;
     /* background-color: var(--white); */
@@ -50,28 +69,51 @@ header section p{
     margin-inline-start: 55px;
 }
 main{
-    display: grid;
-    grid-template-columns: 1fr 5fr;
-    margin-inline-start: var(--right-ruler);
-    margin-block-start: var(--top-ruler);
+    /*display: grid;
+     grid-template-columns: 1fr 4fr; 
+     margin-inline-start: var(--right-ruler);
+    margin-block-start: var(--top-ruler); 
+
+      @media (max-width: 1024px) {
+        grid-template-columns: 1fr 2fr; 
+    }
+    
+    @media (max-width: 600px) {
+    grid-template-columns: 1fr; 
+    } */
+}
+nav.navigation-bar{
+    width: 90%;
+    margin-inline: 55px;
+    display: flex;
+    padding: 2rem;
+    font-family: 'Inconsolata';
+    font-weight: 300;
 }
 main nav div.class{
-    font-family: monospace;
-    font-size: 2.5rem;
-    padding: 21px;
+    /* font-family: monospace; */
+    font-size: 2rem;
+    padding: 15px 21px;
     background-color: var(--white);
-    border-bottom: 2px solid var(--main-light);
+    /* border-bottom: 2px solid var(--main-light); */
     margin-block-end: 21px;
+    border: 1px solid transparent;
+    border-radius: 7px;
+}
+main nav div.class:not(:first-child){
+    margin-inline-start: 10px;
 }
 main nav div.class:hover{
-    border-bottom: 2px solid var(--main-right);
+    border: 1px solid var(--main-dark);
 }
 main nav div.class.active{
-    border-bottom: 2px solid var(--main-dark);
+    font-weight: 400;
+    border: 1px solid var(--main-dark);
 }
 main .content-container{
     /* border: 1px solid var(--main-light); */
     margin-inline: 55px;
+    padding: 21px;
     box-shadow: 0 0 13px var(--main-light);
 }
 article{

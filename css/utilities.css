@@ -41,14 +41,20 @@ html{
 .f-size-small{
     font-size: 1.5rem;
 }
-ul{
-    list-style: none;
-}
+
 .program{
     color: blue;
 }
-.code{
+.code {
     color: var(--main-line);
+}
+.code-block{
+    background: var(--white);
+    border-radius: 5px;
+    padding: 0 7px;
+}
+.d-block{
+    display: block;
 }
 .d-flex{
     display: flex;

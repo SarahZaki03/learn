@@ -3,6 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="cache-control" content="no-cache" />
+    <meta http-equiv="expires" content="0" />
+    <meta http-equiv="pragma" content="no-cache" />
     <title>Learn</title>
     <link rel="stylesheet" href="css/utilities.css" />
     <link rel="stylesheet" href="css/style.css" />
@@ -15,7 +18,7 @@
       </section>
     </header>
     <main>
-      <nav>
+      <nav class="navigation-bar">
         <div class="class active"><a href="#">class 1</a></div>
         <div class="class"><a href="#">class 2</a></div>
         <div class="class"><a href="#">class 3</a></div>
@@ -99,15 +102,51 @@
         </article>
         <article class="m-all p-all">
           <h3 class="monospace f-size-2">Programming main concepts</h3>
-          <p class="edufont f-size-small m-t">
-            <ul class="monospace f-size-small m-t">
-              <li>Expression</li>
-              <li>Statement</li>
-            </ul>
-          </p>
+          <ul class="monospace f-size-small m-t">
+            <li>
+              Computer programs consists of instructions to either:
+              <ol>
+                <li>Compute some Value</li>
+                <li>Carry out some action</li>
+              </ol>
+            </li>
+            <li><b>Expressions </b>typically describe computations</li>
+            <li><b>Statements </b>typically describe actions</li>
+            <li>The assignment statement <code class="code-block">=</code></li>
+            <li><b>Names and Environment:</b></li>
+            <li>
+              <p>
+                if value has been given a name, we say that the name binds to
+                the value.
+              </p>
+              <p>
+                We can establish new bindings using the assignment statement
+              </p>
+              <code class="code-block d-block m-t">name = value</code>
+              <code class="code-block d-block m-t">
+                >>> radius = 10 <br />
+                >>> 2 * radius <br />
+                20
+              </code>
+              <code class="code-block d-block m-t">
+                >>> from math import pi <br />
+                >>> pi * 71 / 223 <br />
+                1.0002380197528042
+              </code>
+              <p class="m-t">
+                The possibility of binding names to a values and later
+                retrieving those values by name means that the interpreter must
+                maintain some sort of memory that keeps track of the names,
+                values, and binding.
+              </p>
+              <p>This memory is called an environment</p>
+            </li>
+          </ul>
         </article>
       </section>
     </main>
-    <footer class="d-flex flex-center"><p class="edufont f-size-2 m-t">Learn with Sarah</p></footer>
+    <footer class="d-flex flex-center">
+      <p class="edufont f-size-2 m-t">Learn with Sarah</p>
+    </footer>
   </body>
 </html>
