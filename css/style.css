@@ -71,6 +71,7 @@ header section p{
     margin-inline-start: 55px;
 }
 main{
+    margin-block-start: 35px;
     /*display: grid;
      grid-template-columns: 1fr 4fr; 
      margin-inline-start: var(--right-ruler);
