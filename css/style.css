@@ -8,6 +8,8 @@ html{
     --main-line: #b6846b;
     --right-ruler: 7rem;
     --top-ruler: 4rem;
+    --clamp: clamp(1rem, -0.875rem + 8.333333vw, 3.5rem);
+    --clamp-paragraph: clamp(1rem, -0.875rem + 8.333333vw, 2.5rem);
 }
 *{
     margin: 0;
@@ -41,31 +43,31 @@ header.main-header{
     background-size: cover;
     background-position: right;
     background-clip: padding-box;
-    /* background-image: linear-gradient(to right, 0 transparent 50%, green), url('../img/bird.png');  */
-    background-image:
+    /* background-image:  url('../img/bird.png');  */
+    /* background-image:
     linear-gradient(to bottom, rgba(245, 246, 252, 0.22) 70%, var(--main-light)),
-    url('../img/bird.png');
+    url('../img/bird.png'); */
     background-position: top;
     /* background-color: var(--white); */
     border-bottom: 3px solid var(--main-dark);
     color: var(--main-dark);
 }
 header section{
-    margin-inline-start: var(--right-ruler);
+    margin-inline-start: var(--clamp);
     padding-block-start: var(--top-ruler);
 }
 header h1, header h2{
     font-family: monospace;
 }
 header h1{
-    font-size: 3rem;
+    font-size: var(--clamp);
 }
 header h2{
-    font-size: 2rem;
+    font-size: var(--clamp-paragraph);
 }
 header section p{
     font-family: 'Edu SA Beginner', monospace;
-    font-size: 1.5rem;
+    font-size: var(--clamp-paragraph);
     margin-inline-start: 55px;
 }
 main{
@@ -74,7 +76,7 @@ main{
      margin-inline-start: var(--right-ruler);
     margin-block-start: var(--top-ruler); 
 
-      @media (max-width: 1024px) {
+    @media (max-width: 1024px) {
         grid-template-columns: 1fr 2fr; 
     }
     
@@ -84,11 +86,17 @@ main{
 }
 nav.navigation-bar{
     width: 90%;
-    margin-inline: 55px;
+    margin: auto;
     display: flex;
-    padding: 2rem;
+    gap: 7px;
+    flex-wrap: wrap;
+    /* padding: 2rem; */
     font-family: 'Inconsolata';
     font-weight: 300;
+
+    /* @media (max-width: 600px) {
+        display: block;
+    } */
 }
 main nav div.class{
     /* font-family: monospace; */
@@ -99,15 +107,16 @@ main nav div.class{
     margin-block-end: 21px;
     border: 1px solid transparent;
     border-radius: 7px;
+    flex: 1;
 }
-main nav div.class:not(:first-child){
+/* main nav div.class:not(:first-child){
     margin-inline-start: 10px;
-}
+} */
 main nav div.class:hover{
     border: 1px solid var(--main-dark);
 }
 main nav div.class.active{
-    font-weight: 400;
+    /* font-weight: 400; */
     border: 1px solid var(--main-dark);
 }
 main .content-container{
@@ -115,6 +124,10 @@ main .content-container{
     margin-inline: 55px;
     padding: 21px;
     box-shadow: 0 0 13px var(--main-light);
+    @media (max-width: 700px) {
+        margin-inline: 5px;
+        padding: 3px;
+    }
 }
 article{
     background-color: var(--main-light);
