@@ -59,7 +59,22 @@ html{
 .d-flex{
     display: flex;
 }
+.small-gap{
+    gap: 13px;
+}
+.medium-gap{
+    gap: 21px;
+}
+.justfy-content-between{
+    justify-content: space-between;
+}
 .flex-center{
     align-items: center;
     justify-content: center;
+}
+.direction-column{
+    flex-direction: column;
+}
+.wrap{
+    flex-wrap: wrap;
 }

@@ -37,24 +37,24 @@ p::first-letter{
     text-transform: capitalize;
 }
 header.main-header{
-    height: 377px;
+    min-height: 377px;
     
     background-repeat: no-repeat;
     background-size: cover;
     background-position: right;
     background-clip: padding-box;
-    /* background-image:  url('../img/bird.png');  */
-    /* background-image:
-    linear-gradient(to bottom, rgba(245, 246, 252, 0.22) 70%, var(--main-light)),
-    url('../img/bird.png'); */
-    background-position: top;
+    /* background-image:  url('../img/ai/pixlr-image-generator-18e504bd-46c3-49e4-8282-cc563ea23af6.png');  */
+    background-image:
+    linear-gradient(to top, rgba(245, 246, 252, 0.32) 30%, #ffffff),
+    url('../img/ai/pixlr-image-generator-18e504bd-46c3-49e4-8282-cc563ea23af6.png');
+    /* background-position: top; */
     /* background-color: var(--white); */
-    border-bottom: 3px solid var(--main-dark);
+    
     color: var(--main-dark);
 }
-header section{
-    margin-inline-start: var(--clamp);
-    padding-block-start: var(--top-ruler);
+header{
+    padding-inline-start: var(--clamp);
+    padding-block: var(--top-ruler);
 }
 header h1, header h2{
     font-family: monospace;
@@ -70,8 +70,29 @@ header section p{
     font-size: var(--clamp-paragraph);
     margin-inline-start: 55px;
 }
+/* .parallel-programs div{
+    background-color: var(--main-line);
+    padding: 8px 13px;
+    border-radius: 5px;
+} */
+.parallel-programs div a{
+    background-color: var(--main-line);
+    padding: 8px 13px;
+    border-radius: 5px;
+    color: var(--white);
+}
+/* .parallel-programs div:hover{
+    background-color: yellow;
+    color: var(--main-dark);
+} */
+.parallel-programs div a:hover{
+    background-color: yellow;
+    color: var(--main-dark);
+}
 main{
-    margin-block-start: 35px;
+    border-top: 3px solid var(--main-dark);
+    padding-top: 21px;
+    /* margin-block-start: 35px; */
     /*display: grid;
      grid-template-columns: 1fr 4fr; 
      margin-inline-start: var(--right-ruler);
